@@ -1,0 +1,47 @@
+<body>
+
+    <center>
+    <div style="font-family : verdana; font-size: 13px; width: 600px;">
+
+        <div style="margin-top:5px;">
+            <br/>
+            <img src="https://dl.dropboxusercontent.com/s/ktskry731xk1bea/event_birthday.jpg?dl=0" width="600" alt="Happy Birthday To You"/>
+        </div>
+
+        <div style="margin-top:2px; background-color: #F0F0F0; color:#800000">
+
+            <div style="padding:13px;">
+                <p align="center"><b>Dear ${who}</b></p>
+
+                <p align="center" style="line-height: 180%;">
+                    #if ($customMessage)
+                        ${customMessage}
+                    #else
+                        On your special day, I wish you another year with the warmth of sunshine, the feeling of love and the sharing of good cheer.
+                    #end
+                </p>
+
+                <p align="center">
+                    Wish you all the joys you can wish.
+                </p>
+
+                <p align="center">
+                    Happy Birthday!
+                </p>
+
+                <p align="center" style="line-height: 180%;">
+                    <b>${byWhom}</b>
+                </p>
+
+            </div>
+        </div>
+
+        <div style="margin-top:4px; background-color: #F0F0F0; color:#000000">
+            <div style="padding:10px; font-size: 10px;">
+                <center>&copy;2017. Satyam Shandilya</center>
+            </div>
+        </div>
+
+    </div>
+    </center>
+</body>

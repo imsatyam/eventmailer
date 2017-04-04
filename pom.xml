@@ -1,0 +1,146 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.satyam.app.util</groupId>
+	<artifactId>eventmailer</artifactId>
+
+	<packaging>jar</packaging>
+	<version>1.0.0.1</version>
+	<name>Mailer utility to send email for events using gmail</name>
+	<description>A utility to send emails using gmail api</description>
+
+	<parent>
+		<groupId>com.satyam.app</groupId>
+		<artifactId>app-parent</artifactId>
+		<version>1.0.0.0</version>
+	</parent>
+
+	<properties>
+
+		<!-- Just to keep track, put java version -->
+		<java.version>1.8</java.version>
+		
+		<!-- Javax mail -->
+		<javax.mail.version>1.4</javax.mail.version>
+		
+		<!-- Base Utils -->
+		<base.utils.version>1.0.0.1</base.utils.version>
+
+		<!-- Spring framework -->
+		<spring.version>4.1.7.RELEASE</spring.version>
+		
+		<!-- Activation -->
+		<activation.version>1.1.1</activation.version>
+
+		<!-- Google API -->
+		<google-api-svc-version>v1-rev48-1.22.0</google-api-svc-version>
+
+		<!-- google-http-client -->
+		<google-http-client>1.22.0</google-http-client>
+
+		<!-- IO Commons -->
+		<io.commons>2.5</io.commons>
+
+		<!-- Poi -->
+		<poi.version>3.14</poi.version>
+
+	</properties>
+
+	<dependencies>
+		
+		<!-- Base Utils -->
+		<dependency>
+			<groupId>com.satyam.app.util.base</groupId>
+			<artifactId>baseUtils</artifactId>
+			<version>${base.utils.version}</version>
+		</dependency>
+		
+		<!-- Javax Mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+		
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<!-- Javax Activation -->
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>${activation.version}</version>
+		</dependency>
+
+		<!-- Google Api services -->
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-gmail</artifactId>
+			<version>${google-api-svc-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-drive</artifactId>
+			<version>v3-rev41-1.22.0</version>
+		</dependency>
+
+		<!-- google-http-client -->
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client</artifactId>
+			<version>${google-http-client}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client-jetty</artifactId>
+			<version>${google-http-client}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${io.commons}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi.version}</version>
+		</dependency>
+
+		<!-- velocity -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+
+	</dependencies>
+</project>
