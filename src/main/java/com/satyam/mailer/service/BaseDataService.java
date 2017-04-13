@@ -105,14 +105,24 @@ public class BaseDataService {
                 }
 
                 Map<String, String> columnMap = new HashedMap<String, String>();
-                int cellIndex = 0;
-                Iterator<Cell> cellIterator = row.cellIterator();
+              //  int cellIndex = 0;
+
+                for(int cIndex = 0; cIndex < row.getLastCellNum(); cIndex++){
+                    if (cIndex >= headerList.size()) {
+                        break;
+                    }
+                    Cell cell = row.getCell(cIndex, Row.CREATE_NULL_AS_BLANK);
+                    columnMap.put(headerList.get(cIndex), getCellValue(cell));
+                }
+
+
+                /*Iterator<Cell> cellIterator = row.cellIterator();
                 while (cellIterator.hasNext())
                 {
                     Cell cell = cellIterator.next();
                     columnMap.put(headerList.get(cellIndex), getCellValue(cell));
                     cellIndex++;
-                }
+                }*/
                 if (columnMap != null && !columnMap.isEmpty()) {
                     rowList.add(columnMap);
                 }
@@ -133,17 +143,18 @@ public class BaseDataService {
      */
     private String getCellValue (Cell cell){
         String cellValue = null;
-        switch (cell.getCellType())
-        {
-            case Cell.CELL_TYPE_NUMERIC:
-                Double val = cell.getNumericCellValue();
-                if (val != null) {
-                    cellValue = String.valueOf(val);
-                }
-                break;
-            case Cell.CELL_TYPE_STRING:
-                cellValue = cell.getStringCellValue();
-                break;
+        if (cell != null) {
+            switch (cell.getCellType()) {
+                case Cell.CELL_TYPE_NUMERIC:
+                    Double val = cell.getNumericCellValue();
+                    if (val != null) {
+                        cellValue = String.valueOf(val);
+                    }
+                    break;
+                case Cell.CELL_TYPE_STRING:
+                    cellValue = cell.getStringCellValue();
+                    break;
+            }
         }
         return cellValue;
     }
