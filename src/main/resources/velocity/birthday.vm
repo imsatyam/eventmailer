@@ -38,7 +38,7 @@
 
         <div style="margin-top:4px; background-color: #F0F0F0; color:#000000">
             <div style="padding:10px; font-size: 10px;">
-                <center>&copy;2017. Satyam Shandilya</center>
+                <center>&copy;${year}. Satyam Shandilya</center>
             </div>
         </div>
 

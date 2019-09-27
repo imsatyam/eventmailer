@@ -129,6 +129,7 @@ public class PersonalEventJobProcessor extends EventJobProcessor implements JobP
             }
 
             VelocityContext ctx = new VelocityContext();
+            ctx.put("year", LocalDate.now().getYear());
             ctx.put("who", sentTo);
             ctx.put("byWhom", sentBy);
 

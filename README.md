@@ -67,3 +67,12 @@ Code is extensible and can be easily extended to read data from any source and s
   
   ## {param12-repositoryUrl}
   In case you are using an excel then this represents the url of the file on say google drive. 
+
+## Build
+Run command `mvn clean package`
+
+## Build artifact
+Build generates an executable jar.
+
+## Execution
+Run command `java -jar eventmailer-1.0.0.1.jar <path to config xml>`
