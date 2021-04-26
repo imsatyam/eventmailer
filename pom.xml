@@ -40,7 +40,7 @@
 		<google-http-client>1.22.0</google-http-client>
 
 		<!-- IO Commons -->
-		<io.commons>2.5</io.commons>
+		<io.commons>2.7</io.commons>
 
 		<!-- Poi -->
 		<poi.version>3.14</poi.version>
