@@ -28,7 +28,7 @@
 		<base.utils.version>1.0.0.1</base.utils.version>
 
 		<!-- Spring framework -->
-		<spring.version>4.1.7.RELEASE</spring.version>
+		<spring.version>5.2.22.RELEASE</spring.version>
 
 		<!-- Activation -->
 		<activation.version>1.1.1</activation.version>
