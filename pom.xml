@@ -43,7 +43,7 @@
 		<io.commons>2.5</io.commons>
 
 		<!-- Poi -->
-		<poi.version>3.14</poi.version>
+		<poi.version>4.1.1</poi.version>
 
 	</properties>
 
